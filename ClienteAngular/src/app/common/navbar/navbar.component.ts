@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarService } from '../../services/navbar.service';
 import { NavbarItem } from '../../interface/navbar-item';
 
 @Component({
@@ -7,30 +8,12 @@ import { NavbarItem } from '../../interface/navbar-item';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  navbarItems: NavbarItem[] = [
-    {
-      name: 'About',
-      url: '#about',
-      class_a: 'nav-link',
-      class_li: 'nav-item',
-    },
-    {
-      name: 'Services',
-      url: '#services',
-      class_a: 'nav-link',
-      class_li: 'nav-item',
-    },
-    {
-      name: 'Portfolio',
-      url: '#portfolio',
-      class_a: 'nav-link',
-      class_li: 'nav-item',
-    },
-    {
-      name: 'Contact',
-      url: '#contact',
-      class_a: 'nav-link',
-      class_li: 'nav-item',
-    },
-  ];
+  navbarItems: NavbarItem[] = [];
+  constructor(private navbarService: NavbarService) {
+    navbarService.getData().subscribe((res) => {
+      console.log(res.links);
+
+      this.navbarItems = res.links as Array<NavbarItem>;
+    });
+  }
 }

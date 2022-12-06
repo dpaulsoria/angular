@@ -14,8 +14,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul *ngFor="let item of navbarItems" class="navbar-nav ms-auto my-2 my-lg-0">
-        <li class="{{item.class_li}}">
-          <a class="{{item.class_a}}" href="{{item.url}}">{{item.name}}</a>
+        <li class="nav-item">
+          <a class="nav-link" href="{{item.href}}">{{item.text}}</a>
         </li>
       </ul>
     </div>
