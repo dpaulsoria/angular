@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ClienteAngular';
-
+  menu(enlaces: any) {
+    enlaces.toggle();
+  }
 }
