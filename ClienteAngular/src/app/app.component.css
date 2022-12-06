@@ -3,11 +3,3 @@
   margin: 5% auto;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-.example-container {
-height: 100vh;
-}

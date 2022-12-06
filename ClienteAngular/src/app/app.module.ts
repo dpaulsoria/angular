@@ -13,9 +13,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { PhotoComponent } from './common/photo/photo.component';
+import { AlbumComponent } from './common/album/album.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, PhotoComponent, AlbumComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
