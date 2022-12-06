@@ -10,9 +10,7 @@ import { NavbarItem } from '../../interface/navbar-item';
 export class NavbarComponent {
   navbarItems: NavbarItem[] = [];
   constructor(private navbarService: NavbarService) {
-    navbarService.getData().subscribe((res) => {
-      console.log(res.links);
-
+    navbarService.getData().subscribe((res:any) => {
       this.navbarItems = res.links as Array<NavbarItem>;
     });
   }
